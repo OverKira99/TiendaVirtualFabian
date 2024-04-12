@@ -1,5 +1,6 @@
 package com.fabiansuarez.tiendavirtual;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,12 +9,15 @@ import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.ColorKt;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.TextInputLayout;
+
+import yuku.ambilwarna.AmbilWarnaDialog;
 
 public class FormCategoryActivity extends AppCompatActivity {
 
@@ -44,6 +48,28 @@ public class FormCategoryActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnColorPicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AmbilWarnaDialog dialog =new AmbilWarnaDialog(FormCategoryActivity.this, Color.BLUE, new AmbilWarnaDialog.OnAmbilWarnaListener() {
+                    @Override
+                    public void onCancel(AmbilWarnaDialog dialog) {
+
+                    }
+
+                    @Override
+                    public void onOk(AmbilWarnaDialog dialog, int color) {
+
+                    }
+
+
+                });
+            dialog.show();
+            }
+        });
+
+
 
     }
 
