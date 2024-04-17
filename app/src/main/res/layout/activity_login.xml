@@ -47,14 +47,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/shape_contorno"
             android:autofillHints=""
+            android:background="@drawable/shape_contorno"
             android:ems="10"
+            android:hint="@string/correo_electronico"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:padding="10dp"
-            android:text="@string/correo_electronico"
+
+            android:shadowColor="#FFFFFF"
             android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
             tools:ignore="LabelFor" />
 
         <EditText
@@ -68,7 +73,7 @@
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:shadowColor="#FFFFFF"
-            android:text="@string/contrase_a"
+            android:hint="@string/contrase_a"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#FFFFFF"
